@@ -2,8 +2,8 @@ from selenium.webdriver.common.by import By
 
 class ScooterOrderPageLocators:
     # Локаторы кнопок "Заказать"
-    ORDER_BUTTON_TOP = (By.XPATH, "//div[@class='Header_Nav__AGCXC']//button[text()='Заказать']")
-    ORDER_BUTTON_BOTTOM = (By.XPATH, "//div[@class='Home_FinishButton__1_cWm']//button[text()='Заказать']")
+    ORDER_BUTTON_TOP = (By.XPATH, "//div[contains(@class, 'Header')]//button[text()='Заказать']")
+    ORDER_BUTTON_BOTTOM = (By.XPATH, "//div[contains(@class, 'Home_FinishButton')]//button[text()='Заказать']")
 
     # Локаторы формы заказа на 1 странице
     NAME_INPUT = (By.XPATH, "//input[@placeholder='* Имя']")

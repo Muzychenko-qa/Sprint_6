@@ -1,20 +1,20 @@
 import allure
 import pytest
-from locators.qa_locators import QAGLocators
+from locators.main_page_locators import QALocators
 from pages.main_page import MainPage
 from data import AnswerText, Urls
 
-class TestAG:
+class TestAQ:
 
     @pytest.mark.parametrize("question_locator, answer_locator, expected_text", [
-        (QAGLocators.QUESTION_1, QAGLocators.ANSWER_1, AnswerText.ANSWER_TEXT_1),
-        (QAGLocators.QUESTION_2, QAGLocators.ANSWER_2, AnswerText.ANSWER_TEXT_2),
-        (QAGLocators.QUESTION_3, QAGLocators.ANSWER_3, AnswerText.ANSWER_TEXT_3),
-        (QAGLocators.QUESTION_4, QAGLocators.ANSWER_4, AnswerText.ANSWER_TEXT_4),
-        (QAGLocators.QUESTION_5, QAGLocators.ANSWER_5, AnswerText.ANSWER_TEXT_5),
-        (QAGLocators.QUESTION_6, QAGLocators.ANSWER_6, AnswerText.ANSWER_TEXT_6),
-        (QAGLocators.QUESTION_7, QAGLocators.ANSWER_7, AnswerText.ANSWER_TEXT_7),
-        (QAGLocators.QUESTION_8, QAGLocators.ANSWER_8, AnswerText.ANSWER_TEXT_8)
+        (QALocators.QUESTION_1, QALocators.ANSWER_1, AnswerText.ANSWER_TEXT_1),
+        (QALocators.QUESTION_2, QALocators.ANSWER_2, AnswerText.ANSWER_TEXT_2),
+        (QALocators.QUESTION_3, QALocators.ANSWER_3, AnswerText.ANSWER_TEXT_3),
+        (QALocators.QUESTION_4, QALocators.ANSWER_4, AnswerText.ANSWER_TEXT_4),
+        (QALocators.QUESTION_5, QALocators.ANSWER_5, AnswerText.ANSWER_TEXT_5),
+        (QALocators.QUESTION_6, QALocators.ANSWER_6, AnswerText.ANSWER_TEXT_6),
+        (QALocators.QUESTION_7, QALocators.ANSWER_7, AnswerText.ANSWER_TEXT_7),
+        (QALocators.QUESTION_8, QALocators.ANSWER_8, AnswerText.ANSWER_TEXT_8)
     ])
     @allure.description("Проверка ответа на вопрос.")
     def test_question_and_answer(self, driver, question_locator, answer_locator, expected_text):

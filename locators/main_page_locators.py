@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-class QAGLocators:
+class QALocators:
     QUESTION_1 = (By.ID, "accordion__heading-0")
     ANSWER_1 = (By.ID, "accordion__panel-0")
 

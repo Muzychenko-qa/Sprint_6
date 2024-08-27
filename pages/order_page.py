@@ -1,6 +1,5 @@
-
 from pages.base_page import BasePage
-from locators.scooter_order_locators import ScooterOrderPageLocators
+from locators.order_page_locators import ScooterOrderPageLocators
 
 class OrderPage(BasePage):
 
@@ -57,6 +56,6 @@ class OrderPage(BasePage):
     def confirm_order(self):
         self.click_element(ScooterOrderPageLocators.CONFIRM_BUTTON_ORDER)
 
-    def order_success_text(self):
+    def order_successful_displayed(self):
         element = self.wait_and_find_element(ScooterOrderPageLocators.ORDER_SUCCESS_MODAL)
-        return element.text
+        return element.is_displayed()

@@ -1,7 +1,7 @@
 import allure
 import pytest
 from data import Urls, TestData
-from locators.scooter_order_locators import ScooterOrderPageLocators
+from locators.order_page_locators import ScooterOrderPageLocators
 from pages.order_page import OrderPage
 
 
@@ -31,5 +31,4 @@ class TestScooterOrder:
         order_page.submit_order()
         order_page.confirm_order()
 
-        actual_text = order_page.order_success_text()
-        assert "Заказ оформлен" in actual_text, "Сообщение о подтверждении заказа отсутствует или неверное."
+        assert order_page.order_successful_displayed(), "Сообщение о подтверждении заказа не отображается."

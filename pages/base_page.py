@@ -22,4 +22,9 @@ class BasePage:
     def click_element(self, locator):
         element = self.wait_and_find_element(locator)
         element.click()
-        return element
+
+    def get_all_windows(self):
+        return self.driver.window_handles
+
+    def switch_to_window(self, window_name):
+        self.driver.switch_to.window(window_name)
