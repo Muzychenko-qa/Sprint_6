@@ -19,4 +19,4 @@ class MainPage(BasePage):
         new_tab = [window for window in all_windows_after if window not in all_windows_before][0]
         self.switch_to_window(new_tab)
         self.wait_and_find_element(RedirectLocators.DZEN_PAGE)
-        # WebDriverWait(self.driver, 15).until(EC.visibility_of_element_located(RedirectLocators.DZEN_PAGE))
+
